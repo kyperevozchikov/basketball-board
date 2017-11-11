@@ -1,0 +1,132 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: 'digital-7';
+  src: url("/assets/fonts/digital-7.ttf");
+}
+
+@font-face {
+  font-family: 'digital-7-mono';
+  src: url("/assets/fonts/digital-7.mono.ttf");
+}
+
+@font-face {
+  font-family: 'digital-rus';
+  src: url("/assets/fonts/digital-rus.otf");
+}
+
+.digital{
+  font-family: digital-7;
+}
+
+dashboard{
+  display: block;
+  background-color: black;
+  overflow: hidden;
+  padding-top: 5px;
+}
+
+table.dashboard{
+  color: white;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: normal;
+  font-family: digital-rus;
+  margin: 0;
+  background-color: black;
+}
+
+th{
+  font-size: 8vh;
+  color: orange;
+  text-align: center;
+}
+
+th.score-title{
+  width: 35vw;
+}
+
+.overflow-hidden{
+  overflow: hidden;
+}
+
+.count{
+  font-size: 50vh;
+}
+
+.period{
+  font-size: 38vh;
+}
+
+.time{
+  font-size: 12vh;
+  font-family: digital-7-mono;
+}
+
+.time-title{
+  font-size: 8vh;
+  vertical-align: top;
+}
+
+.team-name{
+/*  padding-top: 20px;*/
+  font-size: 11vh;
+  color: cornsilk;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+}
+
+.team-city{
+  font-size: 8vh;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+  padding-bottom: 10px;
+}
+
+.faults{
+  font-size: 8vh;
+}
+
+.faults-title{
+  font-size: 5vh;
+}
+
+.arrow-container{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 0;
+  flex-shrink: 0;
+  justify-content: space-between;
+}
+
+.arrow{
+  font-size: 25vh;
+  opacity: 0.2;
+}
+
+.arrow.left{
+  align-self: flex-start;
+}
+
+.arrow.right{
+  align-self: flex-end;
+}
+
+.arrow.hidden{
+  visibility: hidden;
+  display: block !important;
+}
+
+.arrow.active{
+  opacity: 1 !important;
+}
+

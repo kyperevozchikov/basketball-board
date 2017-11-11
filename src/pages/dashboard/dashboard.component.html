@@ -1,0 +1,57 @@
+<table class="dashboard">
+  <thead>
+  <tr class="head">
+    <th class="score-title">Счёт</th>
+    <th>{{this.timerInfo?.isPeriod ? "Период": "Перерыв"}}</th>
+    <th class="score-title">Счёт</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr class="digital">
+    <td class="count">{{teamFirstStat.score}}</td>
+    <td class="overflow-hidden">
+      <ng-container *ngIf="timerInfo">
+        <div class="period text-warning" *ngIf="timerInfo.isPeriod" >{{timerInfo.title}}</div>
+        <div class="time" *ngIf="currentTime"
+             [class.text-success]="remainingMilliseconds >= 30000"
+             [class.text-warning]="remainingMilliseconds < 30000 && remainingMilliseconds > 10000"
+             [class.text-danger]="remainingMilliseconds < 10000">{{currentTime}}</div>
+      </ng-container>
+    </td>
+    <td class="count">{{teamSecondStat.score}}</td>
+  </tr>
+  <tr>
+    <td>
+      <div class="faults digital">
+        &nbsp;<span *ngFor="let item of firstTeamFaults" [class.text-danger]="item == 'X'">{{item}}&nbsp;</span>
+      </div>
+      <div class="faults-title text-danger">фолы</div>
+    </td>
+    <td class="time-title text-warning">ВРЕМЯ</td>
+    <td>
+      <div class="faults digital">
+        &nbsp;<span *ngFor="let item of secondTeamFaults" [class.text-danger]="item == 'X'">{{item}}&nbsp;</span>
+      </div>
+      <div class="faults-title text-danger">фолы</div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div class="team-name">{{teamFirstInfo?.name}}</div>
+      <div class="team-city">{{teamFirstInfo?.city}}</div>
+    </td>
+    <td>
+      <div class="arrow-container">
+      <span class="arrow active left"
+            [class.hidden]="nextInputTeamId != 1">&#x25C0;</span>
+      <span class="arrow active right"
+            [class.hidden]="nextInputTeamId != 2">&#x25B6;</span>
+      </div>
+    </td>
+    <td>
+      <div class="team-name">{{teamSecondInfo?.name}}</div>
+      <div class="team-city">{{teamSecondInfo?.city}}</div>
+    </td>
+  </tr>
+  </tbody>
+</table>
