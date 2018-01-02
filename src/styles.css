@@ -2,7 +2,6 @@
 body{
   padding: 0;
   margin: 0;
-  overflow: hidden;
 }
 
 @font-face {
@@ -26,6 +25,8 @@ body{
 
 dashboard{
   display: block;
+  height: 1080px;
+  width: 1920px;
   background-color: black;
   overflow: hidden;
   padding-top: 5px;
@@ -61,11 +62,11 @@ th.score-title{
 }
 
 .period{
-  font-size: 38vh;
+  font-size: 32vh;
 }
 
 .time{
-  font-size: 12vh;
+  font-size: 18vh;
   font-family: digital-7-mono;
 }
 
